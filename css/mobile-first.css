@@ -2,38 +2,38 @@
     box-sizing: border-box;
     transition: 2s;
 }
+
 body {
     margin: 0;
     background-color: darkblue;
     font-family: monospace;
     color: white;
 }
+
 .main-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     height: 100vh;
 }
 
 .sun {
-    grid-column: 1;
-    justify-self: center;
-
     height: 160px;
     width: 160px;
 
     border-radius: 50%;
 
     background-color: rgba(216, 31, 14, 0.863);
+
+    margin-inline: auto;
     margin-block-start: 600px;
 }
 
 h1 {
-    grid-column: 2;
-    justify-self: end;
-    margin-inline-end: 20px;
-
+    margin-inline-end:  20px;
     font-size: 20px;
 }
+
+/* Tablet */
+
 @media screen and (min-width: 768px) {
     body {
         background-color: darkcyan;
@@ -47,6 +47,9 @@ h1 {
         color: #333;
     }
 }
+
+/* Desktop */
+
 @media screen and (min-width: 992px) {
     body {
         background-color: #688acc;
